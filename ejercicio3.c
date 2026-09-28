@@ -1,23 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    int id = 101;
-    int edad = 22;
-    float promedio = 15.8;
-    char categoria = 'B';
-    int es_valido = 1;
+    float medicion;
+    int entero;
+    float perdida;
 
-    printf("--- DATOS DEL REGISTRO ---\n");
-    printf("ID: %d\n", id);
-    printf("Edad: %d anos\n", edad);
-    printf("Promedio: %.2f\n", promedio);
-    printf("Categoria: %c\n", categoria);
+    printf("Ingrese una medicion decimal: ");
+    scanf("%f", &medicion);
 
-    if (es_valido == 1) {
-        printf("Estado: Valido\n");
-    } else {
-        printf("Estado: Invalido\n");
-    }
+    entero = (int)medicion;
+    perdida = medicion - entero;
+
+    printf("\nMedicion original: %.2f\n", medicion);
+    printf("Valor entero: %d\n", entero);
+    printf("Valor decimal perdido: %.2f\n", perdida);
 
     return 0;
 }
